@@ -1,3 +1,5 @@
+Sys.setlocale(category = "LC_CTYPE", locale = "ko_KR.UTF-8")
+
 #Question 1
 
 v1 <- 51:90
@@ -7,6 +9,7 @@ v1_length <- length(v1) #Length of v1
 
 
 #(1-a)
+print('가나')
 
 for(i in 1:v1_length){
   if(v1[i]<60)print(v1[i])
@@ -15,7 +18,6 @@ for(i in 1:v1_length){
 
 
 #(1-b)
-
 under70_cnt <- 0 #Counted number under 70
 
 
@@ -94,7 +96,7 @@ print(even_cnt)
 
 
 
-print("(i) v1에서 홀수이거나 80보다 큰 수를 모두 출력하시오.")
+#(1-i)
 
 for(i in 1:v1_length){
   remainder <- v1[i]%%2
@@ -103,8 +105,7 @@ for(i in 1:v1_length){
 
 
 
-
-print("(j) v1에서 3과 5의 공배수를 출력하시오.")
+#(1-j)
 
 rem1 <- 0
 rem2 <- 0
@@ -115,8 +116,7 @@ for(i in 1:v1_length){
   if((rem1==0)&(rem2==0)&(v1[i]>0))print(v1[i])
 }
 
-
-print("(k) v1에서 짝수에 대해서만 2를 곱하여 저장하시오.")
+#1-k
 
 for(i in 1:v1_length){
   remainder <- v1[i]%%2
@@ -125,8 +125,7 @@ for(i in 1:v1_length){
 
 print(v1)
 
-
-print("(l) v1에서 7의 배수들을 제거한 후 v1의 내용을 출력하시오.")
+#1-l
 
 cnt7 <- 0
 
@@ -156,30 +155,26 @@ print(v1)
 data2 <- swiss
 
 
-
-print("(a) 자료의 요약정보를 나타내시오.")
+#2-a
 
 summary(data2)
 
 
 
 
-
-print("(b) 남성의 농업인 비율이 가장 높은 주는?")
+#2-b
 
 rownames(data2[which.max(data2$Agriculture),])
 
 
 
-
-print("(c) 남성의 농업인 비율을 내림차순으로 정렬하여 주의 이름과 함께 나타내시오.")
+#2-c
 
 data2[order(data2$Agriculture, decreasing = TRUE),]
 
 
 
-
-print("(d) 카톨릭 신자의 비율이 80%이상인 주들의 남성의 농업인 비율을 보이시오.")
+#2-d
 
 for(i in 1:length(data2[,1])){
   if(data2[i,5]>=80)cat(rownames(data2[i,]),":",data2[i,2],'\n')
@@ -187,10 +182,7 @@ for(i in 1:length(data2[,1])){
 
 
 
-
-print("(e) 징집대상자 둥 입대시험에서 높은 평가를 받은 사람들의 비율이 20% 미만이고 남성의
-농업인 비율이 50% 미만인 주의 이름과 Examination, Agriculture 열의 값을 나타내
-시오.")
+#2-e
 
 for(i in 1:length(data2[,1])){
   if((data2[i,3]<20)&(data2[i,2]<=50))
@@ -247,15 +239,15 @@ sum <- 0
 
 for(i in 1:50){
   if(sum==0){
-    cat('0 열 :', sum, '\n')
+    cat('0 row :', sum, '\n')
     second <- 1
     sum <- first + second
-    cat(i,'열 :', sum, '\n')
+    cat(i,'row :', sum, '\n')
   }else{
     sum <- first + second
     first <- second
     second <- sum
-    cat(i,'열 :', sum, '\n')
+    cat(i,'row :', sum, '\n')
   }
 }
 
@@ -287,11 +279,10 @@ find_gcf <- function(x, y) {
   
 }
 
-print('첫번째 정수 입력 : ')
+print('First number? : ')
 n1 <- scan()
-print('두번째 정수 입력 : ')
+print('Second number? : ')
 n2 <- scan()
-print(n2)
 
 print(find_gcf(n1,n2))
 
@@ -309,7 +300,7 @@ find_mxmn <- function(v) {
 
 vct <- sample(x=1:100,size=10)
 
-cat('최소값:',find_mxmn(vct)[1],' 최대값:',find_mxmn(vct)[2], '\n')
+cat('min:',find_mxmn(vct)[1],' max:',find_mxmn(vct)[2], '\n')
 
 
 
