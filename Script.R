@@ -257,5 +257,83 @@ for(i in 1:50){
     second <- sum
     cat(i,'열 :', sum, '\n')
   }
+}
+
+
+#Question 6
+
+
+#6-a
+
+find_gcf <- function(x, y) {
+  
+  remx <- 0
+  remy <- 0
+  gcf <- 0
+  
+  if(y<x){
+    slot <- x
+    x <- y
+    y <- slot
+  }
+  
+  for(i in 1:x){
+    remx <- x%%i
+    remy <- y%%i
+    if((remx==0)&(remy==0))  gcf<- i
+  }
+  
+  return(gcf)
   
 }
+
+print('첫번째 정수 입력 : ')
+n1 <- scan()
+print('두번째 정수 입력 : ')
+n2 <- scan()
+print(n2)
+
+print(find_gcf(n1,n2))
+
+
+
+#6-b
+
+find_mxmn <- function(v) {
+  
+  mm <- c(min(v),max(v))
+  
+  return(mm)
+}
+
+
+vct <- sample(x=1:100,size=10)
+
+cat('최소값:',find_mxmn(vct)[1],' 최대값:',find_mxmn(vct)[2], '\n')
+
+
+
+#Question 7
+
+weight <- c(69,50,55,71,89,64,59,70,71,80)
+
+#7-a
+
+mx <- max(weight)
+
+for(i in 1:length(weight)){
+  if(weight[i]==mx)mx_point<-i
+}
+
+print(mx_point)
+
+
+#7-b
+
+mn <- min(weight)
+
+for(i in 1:length(weight)){
+  if(weight[i]==mn)mn_point<-i
+}
+
+print(mn_point)
