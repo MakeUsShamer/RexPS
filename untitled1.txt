@@ -238,6 +238,23 @@ for(i in 2:1000){
 }
 
 
+#Question 5
+
+first <- 0
+second <- 0
+sum <- 0
 
 
+for(i in 1:50){
+  if(first==0){
+  	second = 1
+	print(second)
+  }else{
+  	sum <- first + second
+	first <- second
+  	second <- sum
+  	print(sum)
+  }
+  
+}
 
