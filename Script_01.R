@@ -1,3 +1,9 @@
+#과제물의 풀이 및 수정 과정이 깃허브에 있습니다.
+#https://github.com/MakeUsShamer/RexPS
+
+
+
+
 #-----------------------------------------------
 #Question 1
 print('Answer for Question 1')
@@ -202,7 +208,7 @@ cat('\n\n')
 #-----------------------------------------------
 print('2-(a)')
 
-summary(data2)
+print(summary(data2))
 
 
 
@@ -211,13 +217,17 @@ cat('\n\n')
 #-----------------------------------------------
 print('2-(b)')
 
-rownames(data2[which.max(data2$Agriculture),])
+print(rownames(data2[which.max(data2$Agriculture),]))
+
+
+
+
 
 cat('\n\n')
 #-----------------------------------------------
 print('2-(c)')
 
-data2[order(data2$Agriculture, decreasing = TRUE),]
+print(data2[order(data2$Agriculture, decreasing = TRUE),])
 
 
 
@@ -363,6 +373,8 @@ n1 <- scan()
 print('Second number? : ')
 n2 <- scan()
 
+
+print('The answer is...')
 print(find_gcf(n1,n2))
 
 
