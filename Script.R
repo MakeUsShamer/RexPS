@@ -337,3 +337,30 @@ for(i in 1:length(weight)){
 }
 
 print(mn_point)
+
+
+#7-c
+
+betlist <- c()
+
+for(i in 1:length(weight)){
+  if((weight[i]>61)&(weight[i]<69))betlist <- c(betlist, i)
+}
+
+print(betlist)
+
+
+#7-d
+
+underlist <- c()
+
+for(i in 1:length(weight)){
+  if(weight[i]<=60)underlist <- c(underlist, i)
+}
+
+
+write.csv(underlist, "weight.s", row.names = FALSE)
+
+
+
+print(read.csv("weight.s"))
