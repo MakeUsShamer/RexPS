@@ -1,4 +1,4 @@
-#과제물의 풀이 및 수정 과정이 깃허브에 있습니다.
+#과제풀이 중의 수정과정이 깃허브 히스토리에 있습니다. 
 #https://github.com/MakeUsShamer/RexPS
 
 
@@ -367,6 +367,9 @@ find_gcf <- function(x, y) {
   return(gcf)
   
 }
+
+
+#어떤 숫자를 입력할지 물어본다.
 
 print('First number? : ')
 n1 <- scan()
